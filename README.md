@@ -48,6 +48,31 @@ Newspack Launch and Infrastructure MCP server plugin is a WordPress MCP server f
    composer install
    ```
 
+## MCP Configuration
+
+- **Claude Desktop**
+
+Add this configuration to your MCP settings file (`~/Library/Application Support/Claude/claude_desktop_config.json` on macOS).
+
+- **Cursor IDE**
+
+Add this configuration to your `.cursor/mcp.json` file.
+
+**Note:** Update the path to `mcp-command.php` to match your installation directory.
+
+```json
+{
+  "mcpServers": {
+    "newspack-lit-mcp": {
+      "command": "php",
+      "args": [
+        "/usr/local/var/www/newspack-ai.test/public/wp-content/plugins/newspack-lit-mcp/mcp-command.php"
+      ]
+    }
+  }
+}
+```
+
 ## Testing Server Availability
 
 There are two ways to test the MCP server:
@@ -133,31 +158,6 @@ curl -k -u admin:pass \
 -d '{"jsonrpc":"2.0","method":"tools/call","params":{"name":"lit-mcp-read-json-file","arguments":{"filename":"test.json"}},"id":4}' \
 https://newspack-ai.test/wp-json/lit-mcp/jsonrpc/streamable | \
 jq .
-```
-
-## MCP Configuration
-
-- **Claude Desktop**
-
-Add this configuration to your MCP settings file (`~/Library/Application Support/Claude/claude_desktop_config.json` on macOS).
-
-- **Cursor IDE**
-
-Add this configuration to your `.cursor/mcp.json` file.
-
-**Note:** Update the path to `mcp-command.php` to match your installation directory.
-
-```json
-{
-  "mcpServers": {
-    "newspack-lit-mcp": {
-      "command": "php",
-      "args": [
-        "/usr/local/var/www/newspack-ai.test/public/wp-content/plugins/newspack-lit-mcp/mcp-command.php"
-      ]
-    }
-  }
-}
 ```
 
 ## Troubleshooting
