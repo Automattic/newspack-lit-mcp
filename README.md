@@ -2,6 +2,8 @@
 
 Newspack Launch and Infrastructure MCP server plugin is a WordPress MCP server for migration operations built using the Abilities API and MCP Adapter. This plugin demonstrates how to create an MCP server that exposes WordPress abilities as MCP tools.
 
+**Important note:** this early version is an illustrative POC, and both its transport mechanisms (authentication) and functional elements (tools and value of the effect) are to be improved.
+
 ## Key Features
 
 - **Two MCP Tools Available**:
