@@ -1,0 +1,26 @@
+{
+    "name": "newspack/lit-mcp",
+    "description": "MCP server for JSON file operations using WordPress Abilities API and MCP Adapter",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "autoload": {
+        "classmap": [
+          "src/"
+        ]
+      },    
+    "require": {
+        "php": ">=8.1"
+    },
+    "require-dev": {
+        "wp-coding-standards/wpcs": "^3.0",
+        "automattic/vipwpcs": "^3.0",
+        "phpcompatibility/phpcompatibility-wp": "*"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        },
+        "optimize-autoloader": true,
+        "sort-packages": true
+    }
+}
