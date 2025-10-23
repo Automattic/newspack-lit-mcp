@@ -48,9 +48,9 @@ Newspack Launch and Infrastructure MCP server plugin is a WordPress MCP server f
    composer install
    ```
 
-## Usage
+## Testing Server Availability
 
-There are two ways to use this MCP server:
+There are two ways to test the MCP server:
 
 ### Option 1: Command-Line MCP Server (Recommended for MCP Clients)
 
@@ -137,14 +137,15 @@ jq .
 
 ## MCP Configuration
 
-Add this configuration to your Claude Desktop MCP settings file (`~/Library/Application Support/Claude/claude_desktop_config.json` on macOS):
+- **Claude Desktop**
+
+Add this configuration to your MCP settings file (`~/Library/Application Support/Claude/claude_desktop_config.json` on macOS).
+
+- **Cursor IDE**
+
+Add this configuration to your `.cursor/mcp.json` file.
 
 **Note:** Update the path to `mcp-command.php` to match your installation directory.
-
-### For Cursor IDE
-
-Add this configuration to your `.cursor/mcp.json` file:
-
 
 ```json
 {
